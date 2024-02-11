@@ -1,0 +1,46 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #3b1566 !important;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* Un solo columna para el texto */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.text-t,
+.text {
+  font-weight: bold;
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.dud {
+  color: #757575;
+}
+/* Agrega estilos específicos para los demás elementos */
+.fija {
+  position: fixed; /* Establece la posición fija */
+  z-index: 999; /* Asegura que las imágenes estén por encima del resto del contenido */
+}
+
+.img1 {
+  bottom: 100px;
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Desplaza la imagen hacia la izquierda la mitad de su ancho */
+}
+
+.img2 {
+  bottom: 190px;
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Desplaza la imagen hacia la izquierda la mitad de su ancho */
+  height: 100px;
+}
