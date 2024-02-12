@@ -32,8 +32,7 @@ TxtType.prototype.tick = function() {
       button.className = 'boton';
       button.innerHTML = 'OK';
       button.onclick = function() {
-        // Acción al hacer clic en el botón (puedes cambiar esto según tus necesidades)
-        console.log('OK button clicked');
+        window.location.href = "./step2.html";
       };
       this.el.parentNode.appendChild(button);
       return;
