@@ -13,12 +13,10 @@ body {
   margin-left: 25px;
   margin-right: 15px;
 }
-
 .texto {
   font-size: 24px;
   margin-bottom: 20px;
 }
-
 .boton {
   background-color: #4CAF50;
   color: white;
@@ -28,9 +26,17 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 20px; /* Agregamos un margen superior para separar el botón del texto */
+  display: block; /* Cambiamos a display block para que el botón ocupe todo el ancho */
+  margin: auto; /* Centramos el botón */
 }
 .boton:hover {
   background-color: #45a049;
 }
-
-* { color:#000000; text-decoration: none;}
+.oculto {
+  display: none;
+}
+* {
+  color: #000000;
+  text-decoration: none;
+}

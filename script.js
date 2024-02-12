@@ -1,18 +1,19 @@
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
-  this.loopNum = 0;
   this.period = parseInt(period, 10) || 300;
   this.txt = '';
-  this.tick();
   this.isDeleting = false;
+  this.currentIndex = 0;
+  this.tick();
 };
 
 TxtType.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+  var fullTxt = this.toRotate[this.currentIndex];
+  var that = this;
+  var delta = 200 - Math.random() * 100;
 
-  if (this.isDeleting && this.loopNum < this.toRotate.length - 1) {
+  if (this.isDeleting) {
     this.txt = fullTxt.substring(0, this.txt.length - 1);
   } else {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
@@ -20,25 +21,29 @@ TxtType.prototype.tick = function() {
 
   this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-
   if (this.isDeleting) {
     delta /= 2;
   }
 
   if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
+    if (this.currentIndex === this.toRotate.length - 1) {
+      // Mostrar el botón debajo del último elemento
+      var button = document.createElement('button');
+      button.className = 'boton';
+      button.innerHTML = 'OK';
+      button.onclick = function() {
+        // Acción al hacer clic en el botón (puedes cambiar esto según tus necesidades)
+        console.log('OK button clicked');
+      };
+      this.el.parentNode.appendChild(button);
+      return;
+    }
     this.isDeleting = true;
+    delta = this.period;
   } else if (this.isDeleting && this.txt === '') {
     this.isDeleting = false;
-    this.loopNum++;
+    this.currentIndex++;
     delta = 500;
-  }
-
-  // Detener la función si loopNum alcanza el último elemento en toRotate
-  if (this.loopNum >= this.toRotate.length && this.isDeleting) {
-    return;
   }
 
   setTimeout(function() {
@@ -48,17 +53,16 @@ TxtType.prototype.tick = function() {
 
 window.onload = function() {
   var elements = document.getElementsByClassName('typewrite');
-  for (var i=0; i<elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-type');
-      var period = elements[i].getAttribute('data-period');
-      if (toRotate) {
-        new TxtType(elements[i], JSON.parse(toRotate), period);
-      }
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = JSON.parse(elements[i].getAttribute('data-type'));
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtType(elements[i], toRotate, period);
+    }
   }
   // INJECT CSS
   var css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
-
 };
