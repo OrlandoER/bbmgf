@@ -8,6 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>BABI</title>
+  <style>
+    .fija {
+  position: fixed; /* Establece la posición fija */
+  z-index: 999; /* Asegura que las imágenes estén por encima del resto del contenido */
+}
+    .img1 {
+  height: 340px;
+  bottom: 0px;
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Desplaza la imagen hacia la izquierda la mitad de su ancho */
+}
+.img2 {
+  bottom: 190px;
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Desplaza la imagen hacia la izquierda la mitad de su ancho */
+  height: 100px;
+}
+.img3 {
+  top: 60px;
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Desplaza la imagen hacia la izquierda la mitad de su ancho */
+  height: 200px;
+}
+  </style>
 </head>
 <body>
   <div class="container">
@@ -16,8 +40,11 @@
         <span class="wrap"></span>
       </a>
     </h1>
-    <button class="boton oculto" id="botonOk">OK</button>
+    <button class="boton oculto" id="botonOk"><a href="./step2.html">OK</a></button>
   </div>
+  <img src="./img/gg1.png" class="img1 fija">
+  <img src="./img/corazon2.gif" class="img2 fija">
+  <img src="./img/ovni1.gif" alt="" class="img3 fija">
   <script src="./script.js"></script>
 </body>
 </html>

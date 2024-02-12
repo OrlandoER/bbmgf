@@ -7,6 +7,8 @@ body {
   align-items: center;
   height: 100vh;
   font-weight: bold;
+  background-color: #814992;
+  color: #fff;
 }
 .container {
   text-align: center;
@@ -26,7 +28,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 20px; /* Agregamos un margen superior para separar el botón del texto */
+  margin-top: 20px !important; /* Agregamos un margen superior para separar el botón del texto */
   display: block; /* Cambiamos a display block para que el botón ocupe todo el ancho */
   margin: auto; /* Centramos el botón */
 }
@@ -37,6 +39,6 @@ body {
   display: none;
 }
 * {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
