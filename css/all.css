@@ -1,0 +1,36 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #623280 !important;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: #38a8d1;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}

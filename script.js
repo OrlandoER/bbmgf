@@ -32,7 +32,7 @@ TxtType.prototype.tick = function() {
       button.className = 'boton';
       button.innerHTML = 'OK';
       button.onclick = function() {
-        window.location.href = "./step2.html";
+        window.location.href = "./html/1.html";
       };
       this.el.parentNode.appendChild(button);
       return;
