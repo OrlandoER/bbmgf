@@ -73,6 +73,8 @@ let counter = 0;
 const next = () => {
   fx.setText(phrases[counter]).then(() => {
     if (counter === phrases.length) {
+      document.getElementById('siButton').style.display = 'block';
+      document.getElementById('textoAdicional').style.display = 'block';
       // Detener la recursión si es el último elemento
       return;
     }
@@ -82,3 +84,8 @@ const next = () => {
   // counter = (counter + 1) % phrases.length;
 };
 next();
+
+function accionBotonSi() {
+  window.location.href = 'https://open.spotify.com/intl-es/track/0R6NfOiLzLj4O5VbYSJAjf?si=b78184acfe7d4ceb';
+  // Agrega aquí la acción que deseas realizar al hacer clic en el botón "SÍ"
+}

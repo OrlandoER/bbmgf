@@ -36,11 +36,44 @@ body {
   bottom: 100px;
   left: 50%; /* Centra horizontalmente */
   transform: translateX(-50%); /* Desplaza la imagen hacia la izquierda la mitad de su ancho */
+  height: 300px;
 }
 
 .img2 {
-  bottom: 190px;
+  bottom: 240px;
   left: 50%; /* Centra horizontalmente */
   transform: translateX(-50%); /* Desplaza la imagen hacia la izquierda la mitad de su ancho */
   height: 100px;
+}
+
+#siButton {
+  font-family: 'Rubik';
+  font-weight: bold;
+  position: fixed;
+  top: 170px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 40px; /* Ajusta el padding según sea necesario */
+  font-size: 54px; /* Ajusta el tamaño de la fuente según sea necesario */
+  background-color: #38a8d1; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none;
+  border-radius: 10px; /* Ajusta el radio de borde según sea necesario */
+  cursor: pointer;
+  height: 100px;
+}
+
+#siButton:hover {
+  background-color: #2c7a9a; /* Cambia el color de fondo del botón al pasar el mouse */
+}
+
+#textoAdicional {
+  font-family: 'Rubik';
+  position: fixed;
+  top: 280px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px; /* Ajusta el tamaño de la fuente según sea necesario */
+  color: white; /* Color del texto */
+  text-align: center;
 }
