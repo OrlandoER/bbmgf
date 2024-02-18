@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <title>Swiper demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
   <!-- Demo styles -->
   <style>
     html,
@@ -15,18 +13,15 @@
       position: fixed !important;
       left: 50px;
       height: 100%;
-      
     }
-
     body {
-      background: #422b76 !important;
+      background: #d7bde3 !important;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 14px;
       color: #000;
       margin: 0;
       padding: 0;
     }
-
     body {
       background: #fff;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -35,24 +30,21 @@
       margin: 0;
       padding: 0;
     }
-
     html,
     body {
       position: relative;
       height: 100%;
     }
-
     body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-
     .swiper {
       width: 320px;
       height: 520px;
     }
-
     .swiper-slide {
       display: flex;
       flex-direction: column;
@@ -64,47 +56,27 @@
       color: #ffffff;
       text-align: center;
     }
-
     .swiper-slide:nth-child(1n) {
       background-color: rgb(59, 21, 102);
     }
-
     .swiper-slide:nth-child(2n) {
       background-color: rgb(40, 85, 120);
     }
-
     .swiper-slide:nth-child(3n) {
       background-color: rgb(58, 45, 145);
     }
-
     .swiper-slide:nth-child(4n) {
-      background-color: rgb(211, 122, 7);
+      background-color: rgb(130, 79, 13);
     }
-
     .swiper-slide:nth-child(5n) {
-      background-color: rgb(118, 163, 12);
+      background-color: rgb(88, 120, 13);
     }
-
     .swiper-slide:nth-child(6n) {
-      background-color: rgb(180, 10, 47);
+      background-color: rgb(104, 4, 26);
     }
-
     .swiper-slide:nth-child(7n) {
-      background-color: rgb(35, 99, 19);
+      background-color: rgb(18, 71, 141);
     }
-
-    .swiper-slide:nth-child(8n) {
-      background-color: rgb(0, 68, 255);
-    }
-
-    .swiper-slide:nth-child(9n) {
-      background-color: rgb(218, 12, 218);
-    }
-
-    .swiper-slide:nth-child(10n) {
-      background-color: rgb(54, 94, 77);
-    }
-
     .imge {
       width: 310px;
       border-radius: 18px;
@@ -116,14 +88,26 @@
       0% {
         transform: rotate(-10deg);
       }
-
       50% {
         transform: rotate(10deg);
       }
-
       100% {
         transform: rotate(-10deg);
       }
+    }
+    .button-wrapper {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .button-wrapper button {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 20px 40px;
+      background-color: #278441;
+      color: white;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -147,10 +131,10 @@
           <img style="width: 200px; position: fixed; z-index: 9989; left: 170px; bottom: 10px;" src="../img/dui.png" alt="">
       </div>
       <div class="swiper-slide">
-        <p style="background-color: #3800395f; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 10px; top: 0px;">¡Entonces véndeme y cómprate un conejo!</p>
+        <p style="background-color: #380039ac; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 10px; top: 0px;">¡Entonces véndeme y cómprate un conejo!</p>
         <img class="imge" style="width: 240px; position: fixed; z-index: 9989; left: 40px; top: 20px;" src="../img/lilo2.png" alt="">
         <p>Mi berrinchuda enojona</p>
-        <p style="background-color: #3800395f; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 130px; bottom: 5px;">Está bien...</p>
+        <p style="background-color: #380039ac; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 130px; bottom: 5px;">Está bien...</p>
         <img class="imge" style="width: 220px; position: fixed; z-index: 9989; left: 50px; bottom: 10px;" src="../img/ojos.gif" alt="">
       </div>
       <div class="swiper-slide">
@@ -161,39 +145,52 @@
         <img class="imge" style="width: 220px; position: fixed; z-index: 9989; left: 50px; bottom: 10px;" src="../img/diva1.gif" alt="">
       </div>
       <div class="swiper-slide">
-        <p style="background-color: #3800395f; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 100px; top: 1px;">¿Qué haces aquí?</p>
+        <p style="background-color: #380039ac; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 100px; top: 1px;">¿Qué haces aquí?</p>
         <img class="imge" style="width: 260px; position: fixed; z-index: 9989; left: 30px; top: 10px;" src="../img/cama2.gif" alt="">
         <p style="position: fixed; z-index: 9989; left: 70px; bottom: 10px;">Eterna perezoza</p>
-        <p style="background-color: #3800395f; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 120px; top: 110px;">¿Me abres?</p>
+        <p style="background-color: #380039ac; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 120px; top: 110px;">¿Me abres?</p>
         <img class="imge" style="width: 260px; position: fixed; z-index: 9989; left: 30px; top: 120px;" src="../img/cama.gif" alt="">
         <img class="imge" style="width: 160px; position: fixed; z-index: 9999; left: 80px; bottom: 40px;" src="../img/zzz.gif" alt="">
-
       </div>
-      <div class="swiper-slide">Slide 6
-
+      <div class="swiper-slide">
+        <p style="background-color: #3800395f; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 120px; top: 120px;">Así se juega</p>
+        <img class="imge" style="width: 260px; position: fixed; z-index: 9989; left: 30px; top: 10px;" src="../img/trampa.gif" alt="">
+        <p style="position: fixed; z-index: 9989; left: 40px; bottom: 10px;">Tramposa de primera</p>
+        <p style="background-color: #380039ac; padding: 5px; border-radius: 5px; font-size: 14px; position: fixed; z-index: 9999; left: 120px; bottom: 210px;">Por favoooor</p>
+        <img class="imge" style="width: 260px; position: fixed; z-index: 9989; left: 30px; top: 140px;" src="../img/trampa2.gif" alt="">
+        <img class="imge" style="width: 160px; position: fixed; z-index: 9998; left: 80px; bottom: 80px;" src="../img/trampa3.gif" alt="">
       </div>
-      <div class="swiper-slide">Slide 7
-
-      </div>
-      <div class="swiper-slide">Slide 8
-
-      </div>
-      <div class="swiper-slide">Slide 9
-
+      <div class="swiper-slide">
+        <p style="padding-left: 2px;">Y otras mil razones más por las que me <br>vuelves loco</p>
+        <p style="padding-left: 2px;">Y después de un largo tiempo, estoy listo para <br>preguntarte algo</p>
+        <p>¿Lista?</p>
       </div>
     </div>
   </div>
-
+  <div class="button-wrapper">
+    <button id="gotoBabiButton" style="display: none;">Lista</button>
+  </div>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
       effect: "cards",
-      grabCursor: true
+      grabCursor: true,
+      on: {
+        slideChange: function () {
+          var lastSlideIndex = this.slides.length - 1;
+          if (this.activeIndex === lastSlideIndex) {
+            document.getElementById('gotoBabiButton').style.display = 'block';
+          } else {
+            document.getElementById('gotoBabiButton').style.display = 'none';
+          }
+        },
+      },
+    });
+    document.getElementById('gotoBabiButton').addEventListener('click', function() {
+      window.location.href = '../babi.html';
     });
   </script>
 </body>
-
 </html>

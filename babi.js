@@ -86,6 +86,8 @@ const next = () => {
 next();
 
 function accionBotonSi() {
-  window.location.href = 'https://open.spotify.com/intl-es/track/0R6NfOiLzLj4O5VbYSJAjf?si=b78184acfe7d4ceb';
+  window.location.href = './yes.html';
   // Agrega aquí la acción que deseas realizar al hacer clic en el botón "SÍ"
 }
+
+// https://open.spotify.com/intl-es/track/0R6NfOiLzLj4O5VbYSJAjf?si=b78184acfe7d4ceb
